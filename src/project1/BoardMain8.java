@@ -190,15 +190,17 @@ public class BoardMain8 {
             pstmt.setString(2, mempwd);
             rs = pstmt.executeQuery();
             
-            while (rs.next()) {
+            if (rs.next()) {
                 String memberId = rs.getString("MEMID");
-                String memPwd = rs.getString("MEMPWD");
                 String mName = rs.getString("MNAME");
                 String mSex = rs.getString("MSEX");
                 String mNum = rs.getString("MNUM");
-                
-                System.out.println(" |아이디| " + memberId + " |비밀번호| " + memPwd + " |이름| " + mName + " |성별| " + mSex + " |전화번호| " + mNum);
 
+                System.out.println("-------------------------------------------------------------------------------");
+                System.out.println("| 아이디: " + memberId + " | 이름: " + mName + " | 성별: " + mSex + " | 전화번호: " + mNum);
+                System.out.println("-------------------------------------------------------------------------------");
+            } else {
+                System.out.println("활성화된 회원 정보를 찾을 수 없습니다.");
             }
                        	
            } catch (SQLException e) {
