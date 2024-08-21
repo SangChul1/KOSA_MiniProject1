@@ -14,7 +14,7 @@ public class BoardMain7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("----------------------------");
+            System.out.println("-------------------------");
             System.out.println("      미니 프로젝트 1차     ");
             System.out.println("-------------------------");
             System.out.println("====== 메뉴 =====");
